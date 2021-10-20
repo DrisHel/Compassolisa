@@ -7,7 +7,7 @@ class Database {
   }
 
   connect() {
-    return mongoose.connect('mongodb://localhost:27017/bolsista');
+    return mongoose.connect('mongodb+srv://doris:1234@cluster0.kkipq.mongodb.net/myFirstDatabase?retryWrites=true&w=majority');
   }
 }
 
