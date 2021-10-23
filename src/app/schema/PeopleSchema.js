@@ -14,7 +14,7 @@ const PeopleSchema = mongoose.Schema({
         type:Date,
         required:true
       },
-      email:{
+    email:{
         type:String,
         required:true
       },
