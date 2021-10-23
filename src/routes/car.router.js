@@ -1,7 +1,7 @@
 const CarController = require('../app/controller/CarController');
-//const createValidation = require('../app/validation/car/create');
+
 
 module.exports = (server, routes, prefix = '/car') => {
-  routes.post('/', createValidation, CarController.create);
+  routes.post('/', CarController.create);
   server.use(prefix, routes);
 }
