@@ -27,6 +27,25 @@ class CarService {
       return error;
     }
   }
+
+  async updateCar(id, payload) {
+    try {
+      const result = await CarRepository.updateById(id,payload);
+      return result;
+    } catch (error) {
+      return error;
+    }
+  }
+
+  async getByIdCar(id) {
+    try {
+      const result = await CarRepository.getById(id);
+      return result;
+    } catch (error) {
+      return error;
+    }
+  }
+
 }
 
 module.exports = new CarService();

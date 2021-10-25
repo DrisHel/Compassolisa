@@ -5,10 +5,20 @@ class CarRepository  {
     return CarSchema.create(payload);
   }
   async findByParams(search){
+    console.log(search)
     return CarSchema.find(search);
+    
   }
   async deleteById(id){
     return CarSchema.findByIdAndDelete(id);
+  }
+
+  async updateById(id,payload){
+    return CarSchema.findByIdAndUpdate(id,{...payload});
+  }
+
+  async getById(_id){
+    return CarSchema.findById(_id);
   }
 }
 

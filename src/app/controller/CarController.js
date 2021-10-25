@@ -16,6 +16,20 @@ class CarController  {
     const result = await CarService.deleteCar(req.params.id)
     return res.status(204).json(result);
   }
+
+  async update(req,res){
+    const result = await CarService.updateCar(req.params.id, req.body)
+    return res.status(200).json(result);
+  }
+
+  async getById(req,res){
+    const result = await CarService.getByIdCar(req.params.id)
+    return res.status(200).json(result);
+  }
+
+
+
+
 }
 
 
