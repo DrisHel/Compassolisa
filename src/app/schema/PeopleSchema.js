@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const PeopleSchema = mongoose.Schema({
-    nome:{
+    nome:{ 
         type: String,
         required:true
       },
@@ -10,7 +10,7 @@ const PeopleSchema = mongoose.Schema({
         type: String,
         required:true
       },
-    data_nascimento:{
+    data_nascimento:{ 
         type:Date,
         required:true
       },
@@ -24,7 +24,7 @@ const PeopleSchema = mongoose.Schema({
       },
 
     habilitado:{
-        type:Boolean,
+        type:String,
         required:true
       },
 

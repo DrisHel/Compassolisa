@@ -11,6 +11,7 @@ class CarService {
   }
 
   async listAll(search) {
+   
     try {
       const result = await CarRepository.findByParams(search);
       return result;
