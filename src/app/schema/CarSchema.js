@@ -15,17 +15,14 @@ const CarSchema = mongoose.Schema({
   required:true
 },
 
-  acessorios:{
-  type:Array,
-  required:true
-},
+  acessorios:[{
 
-  descricao:{
-  type:String,
-  required:true
-},
+      descricao:{
+        type:String,    
+     }
+ }],
 
-  QtdPassageiros:{
+  quantidadePassageiros:{
   type:Number,
   required:true
 }
@@ -36,3 +33,5 @@ const CarSchema = mongoose.Schema({
 const Car = mongoose.model('Car', CarSchema);
 
 module.exports = Car;
+
+

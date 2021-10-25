@@ -6,6 +6,24 @@ class CarService {
       const result = await CarRepository.create(payload);
       return result;
     } catch (error) {
+      return EvalError;
+    }
+  }
+
+  async listAll(search) {
+    try {
+      const result = await CarRepository.findByParams(search);
+      return result;
+    } catch (error) {
+      return error;
+    }
+  }
+
+  async deleteCar(id) {
+    try {
+      const result = await CarRepository.deleteById(id);
+      return result;
+    } catch (error) {
       return error;
     }
   }
