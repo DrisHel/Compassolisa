@@ -9,6 +9,11 @@ class PeopleRepository  {
     return PeopleSchema.find(search);
     
   }
+  async find(search){
+    console.log(search)
+    return PeopleSchema.findOne(search);
+    
+  }
   async deleteById(id){
     return PeopleSchema.findByIdAndDelete(id);
   }

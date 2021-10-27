@@ -21,6 +21,7 @@ class PeopleController  {
     const result = await PeopleService.getByIdPeople(req.params.id)
     return res.status(200).json(result);
   }
+  
 }
 
 

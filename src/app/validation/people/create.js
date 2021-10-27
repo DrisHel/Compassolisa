@@ -1,4 +1,6 @@
+const { Router } = require('express');
 const Joi = require('joi');
+const People = require('../../schema/PeopleSchema');
 
 module.exports = async (req, res, next) => {  
   try {
@@ -11,10 +13,11 @@ module.exports = async (req, res, next) => {
       habilitado: Joi.string().required()
     });
 
-    const { error } = await schema.validate(req.body, { abortEarl: true });
+    const { error } = await schema.validate(req.body, { abortEarly: false });
     if (error) throw error
     return next();
   } catch (error) {
     return res.status(400).json(error);
   }
+
 }

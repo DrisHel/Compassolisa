@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const bcrypt = require('bcryptjs');
 
 const PeopleSchema = mongoose.Schema({
     nome:{ 
@@ -16,11 +17,14 @@ const PeopleSchema = mongoose.Schema({
       },
     email:{
         type:String,
-        required:true
+        required:true,
+        unique: true,
+        lowercase:true
       },
     senha:{
         type:String,
-        required:true
+        required:true,
+        
       },
 
     habilitado:{
@@ -28,7 +32,29 @@ const PeopleSchema = mongoose.Schema({
         required:true
       },
 
+      senhaResetToken: {
+        type: String,
+        select: false
+      },
+      senhaResetExpires: {
+        type: Date,
+        select: false
+      },
+      createdAt: {
+        type: Date,
+        default: Date.now
+      }
+      
 });
+
+PeopleSchema.pre('save', async function(next) {
+  const people = this
+  if(people.isModified('senha')) {
+    people.senha = await bcrypt.hash(people.senha, 10)
+  }
+
+  next()
+})
 
 const People = mongoose.model('People', PeopleSchema);
 
