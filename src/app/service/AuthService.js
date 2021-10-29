@@ -2,6 +2,7 @@ const PeopleRepository = require('../repository/PeopleRepository');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
+
 class AuthService {
  generateToken(params = {}){
         console.log(params);
@@ -34,7 +35,11 @@ class AuthService {
     } catch (error) {
       return error;
     }
+    
   }
+  
 }
+
+
 
 module.exports = new AuthService();

@@ -6,10 +6,10 @@ module.exports = async (req, res, next) => {
   try {
     const schema = Joi.object({
       nome: Joi.string().required(),
-      cpf: Joi.string().required(),
+      cpf: Joi.string().min(14).max(14).pattern(/[0-9]{3}\.?[0-9]{3}\.?[0-9]{3}\-?[0-9]{2}/).required(),
       data_nascimento: Joi.string().required(),
-      email: Joi.string().required(),
-      senha: Joi.string().required(),
+      email: Joi.string().email().required(),
+      senha: Joi.string().min(6).required(),
       habilitado: Joi.string().required()
     });
 
