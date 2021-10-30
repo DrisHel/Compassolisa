@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
+const mongoosePaginate =require('mongoose-paginate-v2');
 
 const PeopleSchema = mongoose.Schema({
     nome:{ 
@@ -56,6 +57,7 @@ PeopleSchema.pre('save', async function(next) {
   next()
 })
 
+PeopleSchema.plugin(mongoosePaginate);
 const People = mongoose.model('People', PeopleSchema);
 
 module.exports = People;

@@ -5,8 +5,13 @@ class PeopleRepository  {
     return PeopleSchema.create(payload);
   }
   async findByParams(search){
-    console.log(search)
-    return PeopleSchema.find(search);
+    const {page=1,limit=100,...query}=search;
+    return PeopleSchema.paginate({query},{
+      limit:Number(limit),
+      page:Number(page),
+      skip:(Number(page)-1)*Number(limit)
+    });
+    
     
   }
   async find(search){
