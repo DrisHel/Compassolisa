@@ -28,7 +28,7 @@ class CarController  {
       const result = await CarService.deleteCar(req.params.id)
     return res.status(204).json(result);
     } catch (error) {
-      return res.status(400).json(error);
+      return res.status(404).json({message: error.message});
     }
     
   }

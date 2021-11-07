@@ -14,6 +14,10 @@ class CarRepository  {
     
   }
   async deleteById(id){
+    const findCar = await this.getById(id);
+    if(!findCar){
+      throw Error ('carro não encontrado');
+    }
     return CarSchema.findByIdAndDelete(id);
   }
 
