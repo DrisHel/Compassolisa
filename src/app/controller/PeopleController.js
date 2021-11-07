@@ -12,20 +12,37 @@ class PeopleController  {
     }
   }
   async getAll(req,res){
-    const result = await PeopleService.listAll(req.query)
+    try {
+      const result = await PeopleService.listAll(req.query)
     return res.status(200).json(paginatedSerialiser(result));
+    } catch (error) {
+      res.status(500).json({msg:error.message});
+    }
+    
   }
   async delete(req,res){
-    const result = await PeopleService.deletePeople(req.params.id)
+    try {
+      const result = await PeopleService.deletePeople(req.params.id)
     return res.status(204).json(result);
+    } catch (error) {
+      res.status(500).json({msg:error.message});
+    }
   }
   async update(req,res){
+   try {
     const result = await PeopleService.updatePeople(req.params.id, req.body)
     return res.status(200).json(serializer(result));
+   } catch (error) {
+    res.status(500).json({msg:error.message});
+   }
   }
   async getById(req,res){
-    const result = await PeopleService.getByIdPeople(req.params.id)
+    try {
+      const result = await PeopleService.getByIdPeople(req.params.id)
     return res.status(200).json(serializer(result));
+    } catch (error) {
+      res.status(500).json({msg:error.message});
+    }
   }
   
 }

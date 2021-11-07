@@ -6,7 +6,7 @@ module.exports = async (req, res, next) => {
       nome: Joi.string().required(),
       cnpj: Joi.string().required(),
       atividades: Joi.string().required(),
-      endereco:Joi.array().items({descricao:Joi.string().required()}).unique((a, b) => a === b).required(),
+      endereco: Joi.string().required(),
      
     });
 

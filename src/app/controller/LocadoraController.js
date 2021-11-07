@@ -12,20 +12,37 @@ class LocadoraController{
         }
       }
       async getAll(req,res){
-        const result = await LocadoraService.listAll(req.query)
-        return res.status(200).json(paginatedSerialiser(result));
+        try {
+          const result = await LocadoraService.listAll(req.query)
+          return res.status(200).json(paginatedSerialiser(result));
+        } catch (error) {
+          return res.status(500).json({msg:error.message});
+        }
+       
       }
       async delete(req,res){
-        const result = await LocadoraService.deleteLocadora(req.params.id)
+        try {
+          const result = await LocadoraService.deleteLocadora(req.params.id)
         return res.status(204).json(result);
+        } catch (error) {
+          return res.status(500).json({msg:error.message});
+        }
       }
       async update(req,res){
-        const result = await LocadoraService.updateLocadora(req.params.id, req.body)
+        try {
+          const result = await LocadoraService.updateLocadora(req.params.id, req.body)
         return res.status(200).json(serializer(result));
+        } catch (error) {
+          return res.status(500).json({msg:error.message});
+        }
       }
       async getById(req,res){
+       try {
         const result = await LocadoraService.getByIdLocadora(req.params.id)
         return res.status(200).json(serializer(result));
+       } catch (error) {
+        return res.status(500).json({msg:error.message});
+       }
       }
       
     }
