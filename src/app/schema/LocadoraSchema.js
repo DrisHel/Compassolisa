@@ -21,13 +21,31 @@ atividades:{
   endereço:[{
 
       cep:{
-        type:String,    
+        type:String, 
+        required:true   
      },
+        rua:{
+          type:String,
+          required:true
+        },
         number:{
             type:String,
+            required:true
+        },
+        complemento:{
+            type:String,
+        },
+        cidade:{
+            type:String,
+            required:true
+        },
+        estado:{
+            type:String,
+            required:true
         },
         isFilial:{
             type:Boolean,
+            required:true
         }
  }],
 

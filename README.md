@@ -7,7 +7,8 @@
 
 >Como rodar a API?
 
-<p align="center">1-Clone o repotitório aqui do GitHub
+<p align="justify">
+1-Clone o repotitório aqui do GitHub
 2-Abra a pasta pelo terminal ou VS Code
 3-Baixe os modulos do nodejs e packet.json com os comandos : npm install
 4-Para rodar a aplicação : npm start</p>
