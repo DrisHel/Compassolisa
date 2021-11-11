@@ -10,7 +10,8 @@ const PeopleSchema = mongoose.Schema({
 
     cpf:{
         type: String,
-        required:true
+        required:true,
+        unique:true
       },
     data_nascimento:{ 
         type:Date,

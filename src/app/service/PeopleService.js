@@ -8,11 +8,12 @@ class PeopleService {
     if(!checkCpf)
     throw Error('CPF invalid!');
     const correctDate = moment(payload.data_nascimento, 'DD/MM/YYYY').format('YYYY-MM-DD');
-    const age = moment().diff(correctDate, 'years');//idade
+    const age = moment().diff(correctDate, 'years');
     if(age < 18) 
     throw Error('age under 18 years');
     payload.data_nascimento = correctDate;
     const results = await PeopleRepository.create(payload);
+  
     return results;
   }
 

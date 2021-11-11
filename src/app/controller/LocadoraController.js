@@ -1,11 +1,11 @@
-const { paginatedSerialiser } = require('../serializer/carSerializer');
+//const { paginatedSerialiser } = require('../serializer/LocadoraSerializer');
 const LocadoraService = require('../service/LocadoraService');
 
 class LocadoraController{
     async create(req, res) {
         try{
         const result = await LocadoraService.create(req.body);
-        return res.status(201).json(serializer(result));
+        return res.status(201).json(result);
     
         }catch(error){
           return res.status(500).json({msg:error.message});
@@ -14,7 +14,7 @@ class LocadoraController{
       async getAll(req,res){
         try {
           const result = await LocadoraService.listAll(req.query)
-          return res.status(200).json(paginatedSerialiser(result));
+          return res.status(200).json(result);
         } catch (error) {
           return res.status(500).json({msg:error.message});
         }
@@ -31,7 +31,7 @@ class LocadoraController{
       async update(req,res){
         try {
           const result = await LocadoraService.updateLocadora(req.params.id, req.body)
-        return res.status(200).json(serializer(result));
+        return res.status(200).json(result);
         } catch (error) {
           return res.status(500).json({msg:error.message});
         }
@@ -39,7 +39,7 @@ class LocadoraController{
       async getById(req,res){
        try {
         const result = await LocadoraService.getByIdLocadora(req.params.id)
-        return res.status(200).json(serializer(result));
+        return res.status(200).json(result);
        } catch (error) {
         return res.status(500).json({msg:error.message});
        }

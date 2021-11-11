@@ -7,7 +7,7 @@ module.exports = async (req, res, next) => {
       cor: Joi.string().required(),
       ano: Joi.number().integer().min(1950).max(2022).required(),
       acessorios:Joi.array().items({descricao:Joi.string().required()}).unique((a, b) => a === b).required(),
-      quantidadePassajeiros:Joi.number().required()
+      quantidadePassageiros:Joi.number().required()
 
     });
 

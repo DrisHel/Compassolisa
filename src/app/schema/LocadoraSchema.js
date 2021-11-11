@@ -24,7 +24,7 @@ atividades:{
         type:String, 
         required:true   
      },
-        rua:{
+        logradouro:{
           type:String,
           required:true
         },

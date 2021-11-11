@@ -1,7 +1,14 @@
 const LocadoraRepository = require('../repository/LocadoraRepository');
+const CepRepository = require('../repository/CepRepository');
 
 class LocadoraService {
   async create(payload) {
+    const {endereco} = payload;
+    console.log(endereco[0].cep);
+    const meuCEP = endereco[0].cep;
+    const {data} = await CepRepository.getCep(meuCEP);
+    console.log(data);
+
     const result = await LocadoraRepository.create(payload);
     return result;
   }

@@ -6,7 +6,15 @@ module.exports = async (req, res, next) => {
       nome: Joi.string().required(),
       cnpj: Joi.string().required(),
       atividades: Joi.string().required(),
-      endereco: Joi.string().required(),
+      endereco: Joi.array().items({
+      cep: Joi.string().trim().required(),
+      number: Joi.string().min(1).trim().required(),
+      complemento: Joi.string().trim().optional(),
+      isFilial: Joi.boolean().required()
+      })
+      .unique()
+      .min(1)
+      .required()
      
     });
 
