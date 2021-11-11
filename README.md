@@ -13,15 +13,17 @@
 3-Baixe os modulos do nodejs e packet.json com os comandos : 
 npm install<br>
 4-instale os seguintes pacotes:<br>
- <p style="color:red;"> npm install nodemon,<br>
-        npm install express,<br>
-        npm install mongoose,<br>
-        npm install mongoose-paginate-v2,<br>
-        npm install joi,<br>
-        npm install bcryptjs,<br>
-        npm install moment,<br>
-        npm install @joi/date,<br>
-        npm install jsonwebtoken,<br>
-        npm install axios.<br></p>
 
+<ul style="list-style-type:circle">
+  <li>npm install nodemon,</li>
+  <li>npm install express,</li>
+  <li>npm install mongoose,</li>
+  <li> npm install mongoose-paginate-v2,</li>
+  <li>npm install joi,</li>
+  <li>npm install bcryptjs,</li>
+  <li> npm install moment,</li>
+  <li>npm install @joi/date,</li>
+  <li>npm install jsonwebtoken,</li>
+  <li> npm install axios.</li>
+</ul>
 5-Para rodar a aplicação : npm start</p>
