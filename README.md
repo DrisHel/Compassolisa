@@ -22,12 +22,6 @@ $ git clone <https://github.com/DrisHel/Compassolisa.git>
 # Acesse a pasta do projeto no terminal/cmd
 $ cd Compassolisa
 
-# Vá para a pasta server
-$ cd src
-
-# Instale as dependências
-$ npm install i
-
 # Execute a aplicação em modo de desenvolvimento
 $ npm start
 
