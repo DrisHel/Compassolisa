@@ -18,7 +18,7 @@ atividades:{
   required:true
 },
 
-  endereço:[{
+  endereco:[{
 
       cep:{
         type:String, 
@@ -26,26 +26,29 @@ atividades:{
      },
         logradouro:{
           type:String,
-          required:true
+         
         },
         number:{
             type:String,
-            required:true
+            
         },
         complemento:{
             type:String,
         },
-        cidade:{
-            type:String,
-            required:true
+        bairro:{
+          type:String,
         },
-        estado:{
+      localidade:{
             type:String,
-            required:true
+            
+        },
+        uf:{
+            type:String,
+            
         },
         isFilial:{
             type:Boolean,
-            required:true
+            
         }
  }],
 

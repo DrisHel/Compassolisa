@@ -3,7 +3,7 @@ const ValidationLocadoraCreate = require('../app/validation/locadora/create');
 
 module.exports = (server, routes, prefix = '/api/v1/rental/') => {
 
-  routes.post('/',ValidationLocadoraCreate, LocadoraController.create);
+  routes.post('/', LocadoraController.create);
   routes.get('/',LocadoraController.getAll);
   routes.get('/:id', LocadoraController.getById);
   routes.delete('/:id', LocadoraController.delete);

@@ -25,7 +25,7 @@ class LocadoraController{
           const result = await LocadoraService.deleteLocadora(req.params.id)
         return res.status(204).json(result);
         } catch (error) {
-          return res.status(500).json({msg:error.message});
+          return res.status(404).json({msg:error.message});
         }
       }
       async update(req,res){

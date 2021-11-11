@@ -7,7 +7,8 @@ class LocadoraService {
     console.log(endereco[0].cep);
     const meuCEP = endereco[0].cep;
     const {data} = await CepRepository.getCep(meuCEP);
-    console.log(data);
+    payload.endereco = [data];
+   
 
     const result = await LocadoraRepository.create(payload);
     return result;
