@@ -7,14 +7,36 @@
 	🚧  Status 🚀 Em construção...  🚧
 </h4>
 
->Como rodar a API?
+### Pré-requisitos
 
-<p align="justify" >
-1-Clone o repotitório aqui do GitHub >> https://github.com/DrisHel/Compassolisa.git <br>
-2-Abra a pasta pelo terminal ou VS Code<br>
-3-Baixe os modulos do nodejs e packet.json com os comandos : 
-npm install e npm i<br>
-4-Contrucao utilizou-se:<br>
+Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
+[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/). 
+Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
+
+### 🎲 Rodando o Back End (servidor)
+
+```bash
+# Clone este repositório
+$ git clone <https://github.com/DrisHel/Compassolisa.git>
+
+# Acesse a pasta do projeto no terminal/cmd
+$ cd Compassolisa
+
+# Vá para a pasta server
+$ cd src
+
+# Instale as dependências
+$ npm install i
+
+# Execute a aplicação em modo de desenvolvimento
+$ npm start
+
+# O servidor inciará na porta:3333 - acesse <http://localhost:3000>
+```
+
+
+
+### 🛠 Contrucao utilizou-se:
 
 <ul style="list-style-type:circle">
   <li>JavaScript,</li>
@@ -23,7 +45,7 @@ npm install e npm i<br>
   <li>Docker-compuse</li>
   
 </ul>
-5-Para rodar a aplicação : npm start</p>
+
 
 ### Features
 
@@ -32,7 +54,11 @@ npm install e npm i<br>
 - [x] Cadastro de locadoras
 - [x] Editar carros
 - [x] Editar pessoas
-- [] Editar locadoras
+- [ ] Editar locadoras
 - [x] Deletar carros
 - [x] Deletar pessoas
-- [] Deletar locadoras
+- [ ] Deletar locadoras
+
+
+>Autor(a)
+👉 <https://github.com/DrisHel>
