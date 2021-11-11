@@ -1,9 +1,11 @@
-#Compassolisa
+#Compassolisa 🚀
 
 ##Descrição:
 <p align="justify"> Este projeto tem por objetivo uma API para  locadora de automóvel, neste primeiro momento a Api cria o registro dos carros, pessoas e autentificação. Encontra-se em processo de produção, ou seja, será adicionado mais funcionalidades conforme solicitações.</p>
 
-> Status do Projeto: Em desenvolvimento :warning:
+<h4 align="center"> 
+	🚧  Status 🚀 Em construção...  🚧
+</h4>
 
 >Como rodar a API?
 
@@ -27,3 +29,15 @@ npm install<br>
   <li> npm install axios.</li>
 </ul>
 5-Para rodar a aplicação : npm start</p>
+
+### Features
+
+- [x] Cadastro de carros
+- [x] Cadastro de pessoas
+- [x] Cadastro de locadoras
+- [x] Editar carros
+- [x] Editar pessoas
+- [] Editar locadoras
+- [x] Deletar carros
+- [x] Deletar pessoas
+- [] Deletar locadoras
