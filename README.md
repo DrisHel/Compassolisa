@@ -13,20 +13,15 @@
 1-Clone o repotitório aqui do GitHub >> https://github.com/DrisHel/Compassolisa.git <br>
 2-Abra a pasta pelo terminal ou VS Code<br>
 3-Baixe os modulos do nodejs e packet.json com os comandos : 
-npm install<br>
-4-instale os seguintes pacotes:<br>
+npm install e npm i<br>
+4-Contrucao utilizou-se:<br>
 
 <ul style="list-style-type:circle">
-  <li>npm install nodemon,</li>
-  <li>npm install express,</li>
-  <li>npm install mongoose,</li>
-  <li> npm install mongoose-paginate-v2,</li>
-  <li>npm install joi,</li>
-  <li>npm install bcryptjs,</li>
-  <li> npm install moment,</li>
-  <li>npm install @joi/date,</li>
-  <li>npm install jsonwebtoken,</li>
-  <li> npm install axios.</li>
+  <li>JavaScript,</li>
+  <li>Express,</li>
+  <li>MongoDB,</li>
+  <li>Docker-compuse</li>
+  
 </ul>
 5-Para rodar a aplicação : npm start</p>
 
