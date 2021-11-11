@@ -14,6 +14,10 @@ class LocadoraRepository  {
     
   }
   async deleteById(id){
+    const findLocadora = await this.getById(id);
+    if(!findLocadora){
+      throw Error ('Locadora não encontrada');
+    }
     return LocadoraSchema.findByIdAndDelete(id);
   }
 

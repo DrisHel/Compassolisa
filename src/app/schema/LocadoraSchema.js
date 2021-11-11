@@ -1,8 +1,6 @@
 const mongoose = require('mongoose');
 const mongoosePaginate =require('mongoose-paginate-v2');
 
-
-
 const LocadoraSchema = mongoose.Schema({
   nome:{
   type: String,
@@ -38,7 +36,7 @@ atividades:{
         bairro:{
           type:String,
         },
-      localidade:{
+        localidade:{
             type:String,
             
         },
@@ -51,9 +49,6 @@ atividades:{
             
         }
  }],
-
-
-
 });
 
 LocadoraSchema.plugin(mongoosePaginate);
