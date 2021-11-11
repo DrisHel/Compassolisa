@@ -10,7 +10,8 @@
 <p align="justify">
 1-Clone o repotitório aqui do GitHub >> https://github.com/DrisHel/Compassolisa.git <br>
 2-Abra a pasta pelo terminal ou VS Code<br>
-3-Baixe os modulos do nodejs e packet.json com os comandos : npm install<br>
+3-Baixe os modulos do nodejs e packet.json com os comandos : 
+npm install<br>
 4-instale os seguintes pacotes:<br>
         npm install nodemon,<br>
         npm install express,<br>
