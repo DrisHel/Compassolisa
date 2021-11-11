@@ -1,6 +1,6 @@
-#Compassolisa 🚀
+# Compassolisa 🚀
 
-##Descrição:
+## Descrição:
 <p align="justify"> Este projeto tem por objetivo uma API para  locadora de automóvel, neste primeiro momento a Api cria o registro dos carros, pessoas e autentificação. Encontra-se em processo de produção, ou seja, será adicionado mais funcionalidades conforme solicitações.</p>
 
 <h4 align="center"> 
@@ -11,7 +11,7 @@
 
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
 [Git](https://git-scm.com), [Node.js](https://nodejs.org/en/). 
-Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
+Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/).
 
 ### 🎲 Rodando o Back End (servidor)
 
