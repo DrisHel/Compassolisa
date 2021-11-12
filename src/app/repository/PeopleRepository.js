@@ -20,6 +20,10 @@ class PeopleRepository  {
     
   }
   async deleteById(id){
+    const findPeople = await this.getById(id);
+    if(!findPeople){
+      throw Error ('Pessoa não encontrada');
+    }
     return PeopleSchema.findByIdAndDelete(id);
   }
 

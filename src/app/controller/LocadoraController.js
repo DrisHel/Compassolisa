@@ -1,4 +1,5 @@
-//const { paginatedSerialiser } = require('../serializer/LocadoraSerializer');
+const {  serializer,paginatedSerialiser} = require('../serializer/locadoraSerializer');
+
 const LocadoraService = require('../service/LocadoraService');
 
 class LocadoraController{
@@ -31,7 +32,7 @@ class LocadoraController{
       async update(req,res){
         try {
           const result = await LocadoraService.updateLocadora(req.params.id, req.body)
-        return res.status(200).json(result);
+        return res.status(200).json(serializer(result));
         } catch (error) {
           return res.status(500).json({msg:error.message});
         }
